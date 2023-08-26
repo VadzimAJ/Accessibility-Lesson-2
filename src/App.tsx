@@ -6,9 +6,9 @@ import React from 'react';
 const Navigation = () => {
     return (
         <Menu>
-            <MenuItem>Item 1</MenuItem>
-            <MenuItem>Item 2</MenuItem>
-            <MenuItem>Item 3</MenuItem>
+            <MenuItem><a>Item 1</a></MenuItem>
+            <MenuItem><a>Item 2</a></MenuItem>
+            <MenuItem><a>Item 3</a></MenuItem>
         </Menu>
     );
 };
@@ -51,14 +51,14 @@ const Bouncing = keyframes`
     transform: translateY(20%);
 `
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
   margin: 60px 0;
   animation: ${Bouncing} 1s linear infinite alternate;
 `;
 
-const Header = styled.div`
+const Header = styled.header`
   height: 80px;
   background-color: #e91e63;
   display: flex;
@@ -66,32 +66,35 @@ const Header = styled.div`
   align-items: center;
 `;
 
-const Menu = styled.div`
+const Menu = styled.ul`
   display: flex;
   gap: 15px;
 `;
 
-const MenuItem = styled.div`
-  color: white;
-  font-weight: bold;
+const MenuItem = styled.li`
+  a {color: white;
+  font-weight: bold;}
+  list-style: none;
 `;
 
-const LoginBtn = styled.div`
+const LoginBtn = styled.button`
   color: white;
   font-weight: bold;
   padding: 10px 20px;
   border: 2px solid;
   border-radius: 5px;
+
+  background-color: transparent;
 `;
 
-const Block = styled.div`
+const Block = styled.main`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   width: 100%;
   max-width: 500px;
   display: flex;
