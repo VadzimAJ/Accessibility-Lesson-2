@@ -5,10 +5,10 @@ import React from 'react';
 
 const Navigation = () => {
     return (
-        <Menu>
-            <MenuItem><a>Item 1</a></MenuItem>
-            <MenuItem><a>Item 2</a></MenuItem>
-            <MenuItem><a>Item 3</a></MenuItem>
+        <Menu role='menu' aria-label={"Menu"}>
+            <MenuItem><a role="menuitem" href={'#'}>Item 1</a></MenuItem>
+            <MenuItem><a role="menuitem" href={'#'}>Item 2</a></MenuItem>
+            <MenuItem><a role="menuitem" href={'#'}>Item 3</a></MenuItem>
         </Menu>
     );
 };
@@ -22,20 +22,20 @@ function App() {
             </Header>
             <Block>
                 <Title>Accessibility</Title>
-                <Form>
+                <Form role='form' aria-label={"Form"}>
                     <div>
-                        <Label htmlFor="1">Label for field 1</Label>
-                        <Field id="1" placeholder="Field 1"/>
+                        <Label htmlFor="1" aria-labelledby='1'>Label for field 1</Label>
+                        <Field id="1" placeholder="Field 1" aria-placeholder='Field 1'/>
                     </div>
 
                     <div>
-                        <Label htmlFor="2">Label for field 2</Label>
-                        <Field id="2" placeholder="Field 2"/>
+                        <Label htmlFor="2" aria-labelledby='2'>Label for field 2</Label>
+                        <Field id="2" placeholder="Field 2" aria-placeholder='Field 2'/>
                     </div>
 
                     <div>
-                        <Label htmlFor="3">Label for field 3</Label>
-                        <Field id="3" placeholder="Field 3"/>
+                        <Label htmlFor="3" aria-labelledby='3'>Label for field 3</Label>
+                        <Field id="3" placeholder="Field 3" aria-placeholder='Field 3'/>
                     </div>
                 </Form>
             </Block>
